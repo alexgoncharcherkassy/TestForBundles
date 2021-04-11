@@ -3,17 +3,25 @@
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/alexgoncharcherkassy/ChainCommandBundle" },
+        { "type": "vcs", "url": "https://github.com/alexgoncharcherkassy/FooBundle" },
+        { "type": "vcs", "url": "https://github.com/alexgoncharcherkassy/BarBundle" }
+    ],
     "require": {
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "monolog/monolog": "^2.2",
         "symfony/console": "5.2.*",
         "symfony/dotenv": "5.2.*",
         "symfony/flex": "^1.3.1",
         "symfony/framework-bundle": "5.2.*",
-        "symfony/yaml": "5.2.*"
-    },
-    "require-dev": {
+        "symfony/monolog-bridge": "5.2.*",
+        "symfony/yaml": "5.2.*",
+        "alexgoncharcherkassy/chain-command-bundle": "*",
+        "alexgoncharcherkassy/foo-bundle": "*",
+        "alexgoncharcherkassy/bar-bundle": "*"
     },
     "config": {
         "optimize-autoloader": true,

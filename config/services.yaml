@@ -29,3 +29,13 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    foobundle.command.hello:
+        class: AlexGoncharCK\FooBundle\Command\HelloCommand
+        tags:
+            - {name: 'chain_command', master: true}
+
+    barbundle.command.hi:
+        class: AlexGoncharCK\BarBundle\Command\HiCommand
+        tags:
+            - {name: 'chain_command', parent: 'foo:hello'}
